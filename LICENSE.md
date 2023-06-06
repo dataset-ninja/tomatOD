@@ -1,4 +1,4 @@
-The MineApple data uses [Attribution-NonCommercial-ShareAlike 3.0 United States (CC BY-NC-SA 3.0 US)](https://creativecommons.org/licenses/by-nc-sa/3.0/us/) a.k.a. *CreativeCommons*.
+The LaboroTomato data uses [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 **You are free to:**
 
@@ -21,4 +21,4 @@ The licensor cannot revoke these freedoms as long as you follow the license term
 
 > **⚠️ Warning** The license for annotations is not clearly defined by the authors of the dataset.
 
-[🔗 Source](https://conservancy.umn.edu/handle/11299/206575).
+[🔗 Source](https://github.com/up2metric/tomatOD/blob/master/LICENSE).

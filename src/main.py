@@ -43,29 +43,27 @@ dtools.update_sly_url_dict({project_id: download_sly_url})
 # preset fields
 custom_data = {
     # required fields
-    "name": "MinneApple",
-    "fullname": "MinneApple: A Benchmark Dataset for Apple Detection and Segmentation",
+    "name": "TomatOD",
+    "fullname": "Tomat Object Detection",
     "cv_tasks": [
-        "semantic segmentation",
         "object detection",
-        "instance segmentation",
     ],
-    "annotation_types": ["instance segmentation"],
+    "annotation_types": ["object detection"],
     "industries": ["agriculture"],
-    "release_year": 2019,
-    "homepage_url": "https://conservancy.umn.edu/handle/11299/206575",
-    "license": "Attribution-NonCommercial-ShareAlike 3.0 United States",
-    "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/us/",
-    "preview_image_id": 185079,
-    "github": "dataset-ninja/minne-apple",
-    "github_url": "https://github.com/dataset-ninja/minne-apple",
-    "citation_url": "https://conservancy.umn.edu/handle/11299/206575",
+    "release_year": 2020,
+    "homepage_url": "https://github.com/up2metric/tomatOD",
+    "license": "Attribution-NonCommercial-ShareAlike 4.0 International",
+    "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "preview_image_id": 213786,
+    "github": "dataset-ninja/tomatOD",
+    "github_url": "https://github.com/dataset-ninja/tomatOD",
     "download_sly_url": download_sly_url,
     # optional fields
-    "download_original_url": "https://conservancy.umn.edu/handle/11299/206575",
-    "paper": "https://ieeexplore.ieee.org/document/8954630",
-    "organization_name": "University of Minnesota Robotic Sensor Network Laboratory",
-    "organization_url": "https://rsn.umn.edu/",
+    "download_original_url": "https://github.com/up2metric/tomatOD#download-the-data",
+    # "paper": "https://ieeexplore.ieee.org/document/8954630",
+    # "citation_url": "https://conservancy.umn.edu/handle/11299/206575",
+    "organization_name": "up2metric",
+    "organization_url": "http://www.up2metric.com/computer-vision-ai/",
     # "tags": [],
 }
 api.project.update_custom_data(project_id, custom_data)
@@ -111,7 +109,7 @@ def build_stats():
 
     if len(vstats) > 0:
         if heatmaps.force:
-            heatmaps.to_image(f"./stats/{heatmaps.basename_stem}.png", draw_style="outside_black")
+            heatmaps.to_image(f"./stats/{heatmaps.basename_stem}.png")
         if classes_previews.force:
             classes_previews.animate(f"./visualizations/{classes_previews.basename_stem}.webm")
         if previews.force:

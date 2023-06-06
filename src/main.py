@@ -43,7 +43,7 @@ dtools.update_sly_url_dict({project_id: download_sly_url})
 # preset fields
 custom_data = {
     # required fields
-    "name": "TomatOD",
+    "name": "tomatOD",
     "fullname": "Tomat Object Detection",
     "cv_tasks": [
         "object detection",

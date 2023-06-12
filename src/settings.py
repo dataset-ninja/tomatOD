@@ -39,7 +39,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 PAPER: Optional[str] = None
-CITATION_URL: Optional[str] = None
+CITATION_URL: Optional[str] = "https://github.com/up2metric/tomatOD#citations"
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "up2metric"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "http://www.up2metric.com/computer-vision-ai/"
 TAGS: List[str] = None

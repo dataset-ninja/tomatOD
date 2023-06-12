@@ -6,4 +6,4 @@ Each image in the TomatOD dataset has bounding boxes annotations. All images are
 
 Here is the visualized example grid with annotations:
 
-<img src="https://github.com/dataset-ninja/tomatOD/raw/main/visualizations/side_annotations_grid.png">
+<img src="https://github.com/dataset-ninja/tomatOD/raw/main/visualizations/horizontal_grid.png">

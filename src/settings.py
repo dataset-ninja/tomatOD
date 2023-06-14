@@ -5,8 +5,8 @@ from dataset_tools.templates import AnnotationType, CVTask, Industry, License
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "TomatOD"
-PROJECT_NAME_FULL: str = "Tomat object detection"
+PROJECT_NAME: str = "tomatOD"
+PROJECT_NAME_FULL: str = "tomatOD: Tomato Fruit Localization and Ripening Classification"
 
 ##################################
 # * After uploading to instance ##
@@ -40,7 +40,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 PAPER: Optional[str] = None
 CITATION_URL: Optional[str] = "https://github.com/up2metric/tomatOD#citations"
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "up2metric"
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "up2metric, Greece"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "http://www.up2metric.com/computer-vision-ai/"
 TAGS: List[str] = None
 

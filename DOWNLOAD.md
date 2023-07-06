@@ -1,6 +1,6 @@
-Dataset **TomatOD** can be downloaded in Supervisely format:
+Dataset **tomatOD** can be downloaded in Supervisely format:
 
- [Download](https://assets.supervise.ly/supervisely-supervisely-assets-public/teams_storage/3/E/jT/ZYpX9f7tkdaXWsjrfh0h98q8R8nTRF5PmKli3ly4pPN3Va7rWRKKoWJvjb1XKjbzYfNNynnPj8vDKVmp4lT1Nl8qdOnMK9k6VHWzxLZ7W0ps7efCbqdqJnDB7Wvt.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/0/r/Z5/bb7R0aaqwow9YDsScIynpUUHRgxT11hvqCU3hMTOGve4BLOgQEtXum2oni5vPVbo88VhLK54WLxwUotooGjVtqhJfe6JfQqqRAtOmtrK3ep5MqB2gXOWkYFMusJh.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
@@ -11,7 +11,7 @@ pip install --upgrade dataset-tools
 ``` python
 import dataset_tools as dtools
 
-dtools.download(dataset='TomatOD', dst_path='~/dtools/datasets/TomatOD.tar')
+dtools.download(dataset='tomatOD', dst_path='~/dtools/datasets/tomatOD.tar')
 ```
 The data in original format can be downloaded here:
 

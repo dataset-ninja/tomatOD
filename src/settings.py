@@ -12,7 +12,7 @@ PROJECT_NAME_FULL: str = "tomatOD: Tomato Fruit Localization and Ripening Classi
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.CC_BY_NC_SA_4_0()
-INDUSTRIES: List[Industry] = [Industry.Agriculture()]
+APPLICATIONS: List[Industry] = [Industry.Agriculture()]
 CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
 ANNOTATION_TYPES: List[AnnotationType] = [CVTask.ObjectDetection()]
 
@@ -20,7 +20,7 @@ RELEASE_YEAR: int = 2020
 HOMEPAGE_URL: str = "https://github.com/up2metric/tomatOD"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = 213786
+PREVIEW_IMAGE_ID: int = 1633599
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/tomatOD"
@@ -35,10 +35,16 @@ DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = {
 }
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]]] = None
+CLASS2COLOR: Optional[Dict[str, List[str]]] = {
+    "unripe": [126, 211, 33],
+    "semi-ripe": [248, 231, 28],
+    "fully-ripe": [208, 2, 27],
+}
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
-PAPER: Optional[str] = None
+PAPER: Optional[
+    str
+] = "https://isprs-archives.copernicus.org/articles/XLIII-B3-2020/1077/2020/isprs-archives-XLIII-B3-2020-1077-2020.pdf"
 CITATION_URL: Optional[str] = "https://github.com/up2metric/tomatOD#citations"
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "up2metric, Greece"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "http://www.up2metric.com/computer-vision-ai/"
@@ -60,7 +66,7 @@ def get_settings():
         "project_name": PROJECT_NAME,
         "project_name_full": PROJECT_NAME_FULL,
         "license": LICENSE,
-        "industries": INDUSTRIES,
+        "applications": APPLICATIONS,
         "cv_tasks": CV_TASKS,
         "annotation_types": ANNOTATION_TYPES,
         "release_year": RELEASE_YEAR,

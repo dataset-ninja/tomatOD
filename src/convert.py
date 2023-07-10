@@ -23,7 +23,7 @@ def prepare_ann_data(ann_path):
 
     for ann_data in annotations:
         g.id_to_bbox_anns[ann_data["image_id"]].append(ann_data["bbox"])
-        g.id_to_tag[ann_data["image_id"]].append(ann_data["category_id"])
+        g.id_to_anns[ann_data["image_id"]].append(ann_data["category_id"])
 
     for category in ann_json["categories"]:
         g.category_id_to_name[category["id"]] = category["name"]
@@ -35,18 +35,19 @@ def create_ann(img_name, ds_name):
     im_id = g.image_name_to_id[img_name]
     img_size = g.name_to_size[img_name]
     bbox_anns = g.id_to_bbox_anns[im_id]
-    tag_ids = g.id_to_tag[im_id]
+    ann_ids = g.id_to_anns[im_id]
 
     for idx, bbox in enumerate(bbox_anns):
         rectangle = sly.Rectangle(bbox[1], bbox[0], bbox[1] + bbox[3], bbox[0] + bbox[2])
 
         if ds_name == g.train_ds:
-            tag_name = g.category_id_to_name[tag_ids[idx]]
+            ann_name = g.category_id_to_name[ann_ids[idx]]
         else:  # test_ann diff from train_ann in tags data
-            tag_name = g.category_id_to_name[1][tag_ids[idx] - 1]
-        tag = sly.Tag(g.meta.get_tag_meta(tag_name))
+            ann_name = g.category_id_to_name[1][ann_ids[idx] - 1]
 
-        label = sly.Label(rectangle, g.obj_class, tags=sly.TagCollection([tag]))
+        obj_class = g.cls_to_obj_classes[ann_name]
+
+        label = sly.Label(rectangle, obj_class)
         labels.append(label)
 
     return sly.Annotation(img_size=img_size, labels=labels)

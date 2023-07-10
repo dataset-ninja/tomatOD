@@ -51,20 +51,25 @@ batch_size = 30
 class_name = "tomato"
 train_ds = "Train"
 
-obj_class = sly.ObjClass(class_name, sly.Rectangle)
-obj_class_collection = sly.ObjClassCollection([obj_class])
+# obj_class = sly.ObjClass(class_name, sly.Rectangle)
+# obj_class_collection = sly.ObjClassCollection([obj_class])
 
-tag_meta_unripe = sly.TagMeta("unripe", sly.TagValueType.NONE)
-tag_meta_semi_ripe = sly.TagMeta("semi-ripe", sly.TagValueType.NONE)
-tag_meta_fully_ripe = sly.TagMeta("fully-ripe", sly.TagValueType.NONE)
+obj_class_unripe = sly.ObjClass("unripe", sly.Rectangle)
+obj_class_semi_ripe = sly.ObjClass("semi-ripe", sly.Rectangle)
+obj_class_fully_ripe = sly.ObjClass("fully-ripe", sly.Rectangle)
 
-tag_metas = [tag_meta_unripe, tag_meta_semi_ripe, tag_meta_fully_ripe]
+cls_to_obj_classes = {
+    "unripe": obj_class_unripe,
+    "semi-ripe": obj_class_semi_ripe,
+    "fully-ripe": obj_class_fully_ripe,
+}
 
-tag_meta_collection = sly.TagMetaCollection(tag_metas)
-meta = sly.ProjectMeta(obj_classes=obj_class_collection, tag_metas=tag_meta_collection)
+# tag_metas = [tag_meta_unripe, tag_meta_semi_ripe, tag_meta_fully_ripe]
+# tag_meta_collection = sly.TagMetaCollection(tag_metas)
+meta = sly.ProjectMeta(obj_classes=[obj_class_unripe, obj_class_semi_ripe, obj_class_fully_ripe])
 
 # storage_dir = sly.app.get_data_dir()
-storage_dir = "./APP_DATA"
+storage_dir = "./debug_data"
 work_dir_path = os.path.join(storage_dir, work_dir)
 sly.io.fs.mkdir(work_dir_path)
 images_archive_path = os.path.join(work_dir_path, images_arch_name)
@@ -72,6 +77,6 @@ annotations_archive_path = os.path.join(work_dir_path, annotations_arch_name)
 
 image_name_to_id = {}
 id_to_bbox_anns = defaultdict(list)
-id_to_tag = defaultdict(list)
+id_to_anns = defaultdict(list)
 name_to_size = {}
 category_id_to_name = {}

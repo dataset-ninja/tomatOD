@@ -1,4 +1,4 @@
-**tomatOD: Tomato Fruit Localization and Ripening Classification** is a dataset for object detection tasks. It is used in the agriculture industry. 
+**tomatOD: Tomato Fruit Localization and Ripening Classification** is a dataset for object detection tasks. It is used in the agricultural industry. 
 
 The dataset consists of 277 images with 2797 labeled objects belonging to 3 different classes including *unripe*, *fully-ripe*, and *semi-ripe*.
 

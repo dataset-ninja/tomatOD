@@ -1,0 +1,1 @@
+**tomatOD** is a dataset for tomato fruit localization and ripening classification, containing images of tomato fruits in a greenhouse and high-quality expert annotations from agriculturists. It is a task-specific object detection dataset for tomato fruits, suitable for precision agriculture applications that typically require highly-accurate localization.

@@ -1,3 +1,3 @@
-# Tomat object detection
+# tomatOD: Tomato Fruit Localization and Ripening Classification
 
-TomatOD is a dataset for object detection tasks.
+tomatOD is a dataset for object detection tasks.

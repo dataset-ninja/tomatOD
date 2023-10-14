@@ -1,6 +1,6 @@
 Dataset **tomatOD** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/p/0/u6/jdOVZjDKPkEloFwxwC3IT3y6nWhOBpJw7yffzFWmYkABcLHjLzNtZzLVshwpGIWCyf99yWGewRIg74Tviie0BARNTx1Vn9IGeOetVh9XUfGxQCTN4SGZOyo29GWw.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/8/5/K4/cwUbJIw8gmY0yRp3LjXmME62tRIOHKDSGfIe5VcKwYhI6w4ZBvOVgmeUaFIZ5jUxhNhBu8PT6ZwjAsd2RnFkJBQxuQL5MgYO8jhbPFxJE9SB7V8q5Bwq9xojvUlI.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash

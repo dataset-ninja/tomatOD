@@ -61,6 +61,7 @@ PAPER: Optional[
 ] = "https://isprs-archives.copernicus.org/articles/XLIII-B3-2020/1077/2020/isprs-archives-XLIII-B3-2020-1077-2020.pdf"
 CITATION_URL: Optional[str] = "https://github.com/up2metric/tomatOD#citations"
 AUTHORS: Optional[List[str]] = ["Tsironis V.", "Bourou S.", "Stentoumis C."]
+AUTHORS_CONTACTS: Optional[List[str]] = ["it@up2metric.com","christos.stentoumis@gmail.com"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "up2metric, Greece"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "http://www.up2metric.com/computer-vision-ai/"
@@ -107,6 +108,7 @@ def get_settings():
     settings["paper"] = PAPER
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
